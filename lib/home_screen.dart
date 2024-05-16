@@ -12,6 +12,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final TextEditingController _searchController = TextEditingController();
+
+  // List of categories with their names and image URLs
   List<Map<String, String>> categories = [
     {'name': 'Electronics', 'image': 'https://tinyurl.com/5d5bwe8a'},
     {
@@ -91,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 context,
                 MaterialPageRoute(
                     builder: (context) => ProductDetailsScreen(
-                        product: displayedCategories[index]['name']!)),
+                        product: displayedCategories[index]['name']!, imageUrl: '', description: '', price: '',)),
               );
             },
             child: Card(
@@ -121,6 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  // Method to filter categories based on search query
   void _filterCategories(String query) {
     if (query.isEmpty) {
       setState(() {
