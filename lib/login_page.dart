@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'signup_otp_screen.dart';
 import 'home_screen.dart';
+import 'forgot_password_screen.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -61,6 +62,15 @@ class LoginPage extends StatelessWidget {
                     );
                   },
                   child: const Text('Sign Up'),
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ForgotPasswordScreen()),
+                    );
+                  },
+                  child: const Text('Forgot Password?'),
                 ),
               ],
             ),

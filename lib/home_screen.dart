@@ -14,10 +14,18 @@ class _HomeScreenState extends State<HomeScreen> {
   final TextEditingController _searchController = TextEditingController();
   List<Map<String, String>> categories = [
     {'name': 'Electronics', 'image': 'https://tinyurl.com/5d5bwe8a'},
-    {'name': 'Clothing', 'image': 'https://tinyurl.com/2y3hc96z'},
+    {
+      'name': 'Clothing',
+      'image':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWII2CuzVUQw1Ydm2srGx6zhjczn-UFM1zgQ&s'
+    },
     {'name': 'Shoes', 'image': 'https://tinyurl.com/3b5reu78'},
     {'name': 'Books', 'image': 'https://tinyurl.com/56ketjmw'},
-    {'name': 'Home & Kitchen', 'image': 'https://tinyurl.com/4edk89yx'},
+    {
+      'name': 'Home & Kitchen',
+      'image':
+          'https://hips.hearstapps.com/hmg-prod/images/cool-kitchen-gadgets-65566c82b2c29.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*'
+    },
     {'name': 'Toys', 'image': 'https://tinyurl.com/mbdc4nt9'},
   ];
 
@@ -81,7 +89,9 @@ class _HomeScreenState extends State<HomeScreen> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ProductDetailsScreen(product: displayedCategories[index]['name']!)),
+                MaterialPageRoute(
+                    builder: (context) => ProductDetailsScreen(
+                        product: displayedCategories[index]['name']!)),
               );
             },
             child: Card(
@@ -98,7 +108,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       displayedCategories[index]['name']!,
-                      style: const TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                          fontSize: 18.0, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],

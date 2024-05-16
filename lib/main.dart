@@ -6,6 +6,7 @@ import 'signup_otp_screen.dart';
 import 'profile_screen.dart';
 import 'cart_screen.dart';
 import 'product_details_screen.dart';
+import 'forgot_password_screen.dart';
 
 void main() {
   runApp(const MyApp());
